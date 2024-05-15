@@ -1,0 +1,56 @@
+:root{
+  --primary-color:#212529;
+  --secondary-color:#373b69;
+  --color-white:#fff;
+  --color-dark:#000;
+}
+
+body{
+	background-color:var(--secondary-color);
+	color:var(--color-white);
+}
+
+*{
+	padding:0;
+	margin:0;
+}
+
+.acco-head{
+	background-color:var(--color-white);
+	color:var(--primary-color);
+	padding:10px;
+	text-transform:uppercase;
+	margin:0;
+	cursor:pointer;
+	position:relative;
+	}
+	
+.acco-head::before{
+	content:"+";
+	position:absolute;
+	top:5px;
+	right:15px;
+}
+
+.acco-head.active::before{
+	content:"-";
+	position:absolute;
+	top:5px;
+	right:15px;
+}
+	
+
+.acco-head.active{
+	background-color:#FFA500;
+	color:var(--color-white);
+}
+
+.acco-para{
+	padding:10px;
+	margin:0;
+	border:1px solid var(--color-white);
+	display:none;
+	}
+.acco-head.active + .acco-para{
+	display:block;
+}
